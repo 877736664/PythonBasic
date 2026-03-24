@@ -8,7 +8,7 @@
 lst = [1, 2, 2, 3, 3, 3, 4, 5]
 # 请写下代码
 
-unique_lst =
+unique_lst = list(set(lst))
 
 print(f"去重后：{unique_lst}")
 print("-" * 30)
@@ -24,10 +24,10 @@ B = {4, 5, 6, 7, 8}
 # 差集 A-B（在A不在B）
 # 对称差 A^B
 
-union =
-intersection =
-difference =
-symmetric_diff =
+union = A | B
+intersection = A & B
+difference = A - B
+symmetric_diff = A ^ B
 
 print(f"并集：{union}")
 print(f"交集：{intersection}")
@@ -40,10 +40,10 @@ s = {10, 20, 30}
 # 添加 40
 # 删除 20
 # 请写下代码
-
-
+s.add(40)
+s.remove(20)
 
 print(f"操作后：{s}")
 
 # 判断 30 是否在集合中
-print(f"30在集合里吗？")  # 补充代码
+print(f"30在集合里吗？", 30 in s)  # 补充代码
