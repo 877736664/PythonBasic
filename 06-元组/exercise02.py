@@ -24,7 +24,9 @@ print("-" * 30)
 
 def divide(a, b):
     # 计算商和余数，返回
-    pass
+    shang = a // b
+    yushu = a % b
+    return shang, yushu
 
 
 # 测试
@@ -39,8 +41,7 @@ b = 20
 print(f"交换前：a={a}, b={b}")
 
 # 请在这里写下交换代码
-
-
+a, b = b, a
 
 print(f"交换后：a={a}, b={b}")
 print("-" * 30)
@@ -50,9 +51,9 @@ t = (1, 2, 2, 3, 3, 3, 4, 4, 5)
 # 统计 3 出现几次，结果存在 count_three
 # 提示：元组也有 count() 方法，和列表一样
 
-count_three =
+count_three = t.count(3)
 print(f"3在元组中出现了 {count_three} 次")
 
 # 判断 5 是否在元组中，结果存在 has_five
-has_five =
+has_five = 5 in t
 print(f"元组中包含5吗？{has_five}")
