@@ -28,7 +28,7 @@ nums = (10, 20, 30, 40, 50)
 
 print(f"第一个元素：", nums[0])  # 补充完整
 print(f"最后一个元素：", nums[-1])
-print(f"索引1-3：", nums[:3])
+print(f"索引1-3：", nums[1:4])
 
 print("-" * 30)
 
