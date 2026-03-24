@@ -2,6 +2,8 @@
 10-文件操作 - 练习1
 练习目标：掌握文件读取和写入
 """
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
 
 # 1. 创建一个文件，写入几行文字
 # 请创建 test.txt，写入三行：
@@ -11,7 +13,10 @@
 # 使用with语句
 
 # 请写下代码
-
+with open("test.txt", "w", encoding="utf-8") as f:
+    f.write("第一行文字\n")
+    f.write("第二行文字\n")
+    f.write("第三行文字\n")
 
 print("文件写入完成")
 
@@ -22,13 +27,14 @@ print("文件写入完成")
 with open("test.txt", "r", encoding="utf-8") as f:
     content = f.read()
 
-print("\n文件全部内容：")
+print("\n文件全部内容：", content)
 print(content)
 print("-" * 30)
 
 # 3. 逐行读取，打印每行，加上行号
 # 格式：行号: 内容
 # 请写下代码
-
-print("逐行读取：")
+with open("test.txt", "r", encoding="utf-8") as f:
+    for i, line in enumerate(f, start=1):
+        print(f"逐行读取{i}: {line}", end="")
 
